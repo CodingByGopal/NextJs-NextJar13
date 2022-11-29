@@ -9,6 +9,7 @@ const getUserData = ({ params }) => {
       next: { revalidate: 2 },
     })
   );
+
   return (
     <div className=" px-5 h-screen bg-gradient-to-t from-black to-[#ccc]  flex  items-center ">
       <div className="p-14 relative flex justify-center items-center flex-col max-w-screen-xl mx-auto bg-black shadow-2xl shadow-black rounded-xl">

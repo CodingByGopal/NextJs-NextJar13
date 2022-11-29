@@ -13,10 +13,10 @@ const getStaticPropsRevalidate = () => {
   return (
     <section className=" pt-20">
       <Details
-        text="getStaticProps with ISR"
-        description="Displaying list of 10 users on fron json placeholder API. Revalidating the page in every 2 second and click on user to see full details page of user"
+        text="getStaticProps with ISR & generateStaticParams"
+        description="Displaying list of 9 users on fron json placeholder API. Revalidating the page in every 2 second and click on listed users to see full details page"
       />
-      <UserListComponent clickable={true} data={data} />
+      <UserListComponent clickable={true} data={data.slice(0, 9)} />
     </section>
   );
 };

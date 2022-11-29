@@ -9,7 +9,7 @@ const UserListComponent = ({ data, clickable }) => {
     <div className="px-10 pt-10 pb-16 text-[#ddd] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
       {data.map((item) => {
         const getId = () => {
-          router.push(`/getStaticProps-revalidate/${item.id.toString()}`);
+          router.push(`/getStaticProps-revalidate/${item?.id?.toString()}`);
         };
         return (
           <div
@@ -19,13 +19,24 @@ const UserListComponent = ({ data, clickable }) => {
             key={item.id}
           >
             <h1 className=" mb-2  font-bold text-xl ">
-              Name: {item.name.substring(0, 28) || item.namely.substring(0, 28)}
+              Name:{" "}
+              {item?.name?.substring(0, 28) ||
+                item?.namely?.substring(0, 28) ||
+                item?.title?.slice(0, 28)}
             </h1>
             <div className=" opacity-80 text-sm flex gap-1 flex-col">
               {item.username && <p>Username : {item.username}</p>}
               {item.email && <p>Email : {item.email}</p>}
               {item.company && <p>Company : {item.company.name}</p>}
-              {item.body && <p>Comments : {item.body.substring(0, 149)}</p>}
+              {item.body && <p>Comments : {item?.body?.substring(0, 149)}</p>}
+              {item.category && <p>Category : {item.category}</p>}
+
+              {item?.rating?.rate && <p>Rating : {item?.rating?.rate}</p>}
+              {item.price && (
+                <p className=" text-end  text-xs italic mt-5 ">
+                  Price : {item.price}$
+                </p>
+              )}
             </div>
             {item.body && (
               <ul className=" p-1  text-xs md:gap-2 gap-1 flex items-end  justify-end md:mt-3 mt-6">
@@ -34,9 +45,14 @@ const UserListComponent = ({ data, clickable }) => {
                 <li>💡600</li>
               </ul>
             )}
-            {!item.body && (
+            {!item.body && !item?.price && (
               <p className=" p-2 text-sm bg-[#111] absolute top-3 rounded-full   right-3">
                 📌
+              </p>
+            )}
+            {item?.price && (
+              <p className=" p-2 text-sm bg-[#111] absolute top-3 rounded-full   right-3">
+                👕
               </p>
             )}
           </div>

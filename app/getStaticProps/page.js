@@ -13,7 +13,7 @@ const getStaticProps = () => {
     <section className=" pt-20">
       <Details
         text="getStaticProps"
-        description="Displaying list of 12 comments on from json placeholder API. getStaticProps has been used without revalidation and user/comment is not clickable"
+        description="Displaying list of 12 comments on from json placeholder API. getStaticProps has been used without revalidation and listed users/comments are not clickable"
       />
       <UserListComponent data={data?.slice(0, 12)} />
     </section>
