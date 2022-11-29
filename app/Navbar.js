@@ -5,19 +5,20 @@ const linkList = [
     name: "getServerSideProps",
     path: "/",
   },
-  {
-    name: "getStaticProps with revalidate",
-    path: "/getStaticProps-revalidate",
-  },
+
   {
     name: "getStaticProps",
     path: "/getStaticProps",
+  },
+  {
+    name: "getStaticProps ISR",
+    path: "/getStaticProps-revalidate",
   },
 ];
 
 const Navbar = () => {
   return (
-    <nav className=" text-[#eee] bg-black p-5 shadow-2xl shadow-black flex justify-between items-center ">
+    <nav className="z-50 fixed w-full text-[#eee] bg-black p-5 shadow-2xl  shadow-[#111] flex justify-between items-center ">
       <div className=" text-4xl font-bold">
         <Link href="/">NextJar13</Link>
       </div>

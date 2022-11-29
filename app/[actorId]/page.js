@@ -14,7 +14,7 @@ export default function GetSingleActor({ params }) {
   const { name, biography, place_of_birth } = results;
 
   return (
-    <div className="  h-screen px-5">
+    <section className="  h-screen px-5">
       <div className=" max-w-screen-xl  mx-auto bg-[#222] shadow-2xl shadow-black rounded-xl  md:mt-28 mt-10 py-20 px-10 flex flex-col justify-center items-center">
         <h1 className=" text-center md:text-5xl text-3xl font-extrabold mb-4">
           {name}
@@ -31,6 +31,6 @@ export default function GetSingleActor({ params }) {
           </button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }

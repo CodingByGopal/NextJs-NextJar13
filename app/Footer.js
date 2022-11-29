@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   const fullYear = new Date().getFullYear();
   return (
-    <div className=" shadow-2xl shadow-black  text-white flex justify-center items-center bg-black p-10">
+    <div className=" shadow-2xl shadow-[#111]  text-white flex justify-center items-center bg-black p-7">
       <p>
         &copy; {fullYear} NextJar13 by{" "}
         <a
