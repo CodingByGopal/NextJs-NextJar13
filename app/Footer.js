@@ -3,9 +3,9 @@ import React from "react";
 const Footer = () => {
   const fullYear = new Date().getFullYear();
   return (
-    <div className="  text-white flex justify-center items-center bg-black p-10">
+    <div className=" shadow-2xl shadow-black  text-white flex justify-center items-center bg-black p-10">
       <p>
-        &copy; {fullYear} ActJar by{" "}
+        &copy; {fullYear} NextJar13 by{" "}
         <a
           className=" text-blue-500 underline"
           target="_blank"

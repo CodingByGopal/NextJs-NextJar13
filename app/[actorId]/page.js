@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { use } from "react";
 import apiConfig from "../../components/apiConfigTmdb";
-
-const getActor = async (id) => {
-  return await (
-    await fetch(
-      `https://api.themoviedb.org/3/person/${id}?api_key=${apiConfig.apiKey}&language=en-US`,
-      { cache: "no-store" }
-    )
-  ).json();
-};
+import fetchData from "../../components/dataFetcher";
 
 export default function GetSingleActor({ params }) {
   const { actorId } = params;
-  const results = use(getActor(actorId));
+  const results = use(
+    fetchData(
+      `https://api.themoviedb.org/3/person/${actorId}?api_key=${apiConfig.apiKey}&language=en-US`,
+      { cache: "no-store" }
+    )
+  );
   const { name, biography, place_of_birth } = results;
 
   return (
@@ -22,7 +19,9 @@ export default function GetSingleActor({ params }) {
         <h1 className=" text-center md:text-5xl text-3xl font-extrabold mb-4">
           {name}
         </h1>
-        <p className=" text-sm opacity-80 text-center mb-4">{biography}</p>
+        <p className=" text-sm opacity-80 text-center mb-4">
+          {biography ? biography : "Biograpgy : Not Available"}
+        </p>
         <p className="text-sm opacity-80 text-center">
           Place of birth : {place_of_birth ? place_of_birth : "Not Available"}
         </p>
