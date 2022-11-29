@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
       <body>
         <main>
           <div className="  bg-[#121212] text-white max-w-screen-2xl mx-auto overflow-x-hidden">
-            <header className=" pb-20 ">
+            <header>
               <Navbar />
             </header>
 

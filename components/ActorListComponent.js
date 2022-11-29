@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ActorListComponent = ({ results }) => {
   return (
-    <div className="px-10 ">
+    <div className="px-10  ">
       <ul className="  py-16 grid lg:grid-cols-5 md:grid-cols-3  sm:grid-cols-2 grid-cols-1  gap-5  pt-10">
         {results?.map((item) => {
           const val = item.profile_path

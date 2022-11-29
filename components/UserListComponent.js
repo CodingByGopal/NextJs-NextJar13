@@ -1,18 +1,21 @@
 "use client";
+
 import { useRouter } from "next/navigation";
-const UserListComponent = ({ data }) => {
+import React from "react";
+
+const UserListComponent = ({ data, clickable }) => {
   const router = useRouter();
   return (
     <div className="px-10 pt-10 pb-16 text-[#ddd] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
       {data.map((item) => {
         const getId = () => {
-          router.push(`/getStaticProps-revalidate/${item?.id}`);
+          router.push(`/getStaticProps-revalidate/${item.id.toString()}`);
         };
         return (
           <div
-            onClick={getId}
+            onClick={clickable ? getId : null}
             className="
-            bg-black  relative  hover:bg-white hover:text-black rounded-xl shadow-2xl cursor-pointer transition-all duration-200 shadow-black p-8 "
+        bg-black  relative  hover:bg-white hover:text-black rounded-xl shadow-2xl cursor-pointer transition-all duration-200 shadow-black p-8 "
             key={item.id}
           >
             <h1 className=" mb-2  font-bold text-xl ">

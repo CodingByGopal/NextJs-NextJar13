@@ -12,7 +12,7 @@ const Home = () => {
     )
   );
   return (
-    <section>
+    <section className=" pt-20">
       <Details
         description="Displaying list of top 20 actors on The Movie Database API (TMDB). Click on image/text to see full details page "
         text="getServerSideProps"

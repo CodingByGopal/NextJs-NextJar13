@@ -10,7 +10,7 @@ const getStaticProps = () => {
     })
   );
   return (
-    <section>
+    <section className=" pt-20">
       <Details
         text="getStaticProps"
         description="Displaying list of 12 comments on from json placeholder API. getStaticProps has been used without revalidation and user/comment is not clickable"
