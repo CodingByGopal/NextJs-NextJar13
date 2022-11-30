@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { usePathname } from "next/navigation";
 const linkList = [
   {
     name: "getServerSideProps",
@@ -26,7 +27,7 @@ const linkList = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const pathname = usePathname();
   const menu = <FontAwesomeIcon icon={faBars} />;
   const close = <FontAwesomeIcon icon={faXmark} />;
 
@@ -35,10 +36,12 @@ const Navbar = () => {
       <div className=" px-8 py-5 ">
         <div className="flex  justify-between items-center">
           <Link href="/">
-            <p className=" text-4xl  font-bold">NextJar13</p>
+            <p className=" md:text-4xl text-xl  font-bold">
+              NextJar<span className=" text-red-600 font-extrabold">13</span>
+            </p>
           </Link>
 
-          <div className=" text-2xl" onClick={() => setOpen(!open)}>
+          <div className=" md:text-2xl text-lg" onClick={() => setOpen(!open)}>
             {open ? close : menu}
           </div>
         </div>
@@ -52,8 +55,14 @@ const Navbar = () => {
           {linkList.map((item, i) => {
             return (
               <Link key={i} onClick={() => setOpen(false)} href={item.path}>
-                <li className=" px-5 rounded-full  border text-base hover:bg-white hover:text-black transition-all cursor-pointer duration-300   ">
-                  <div className="  flex justify-center items-center md:p-3 p-2">
+                <li
+                  className={`${
+                    pathname === item.path
+                      ? " bg-red-600  cursor-not-allowed border-red-600 "
+                      : ""
+                  } md:px-5 px-2 py-1 rounded-full  border md:text-base text-xs hover:bg-white hover:text-black transition-all cursor-pointer duration-300`}
+                >
+                  <div className="  flex justify-center items-center md:p-3 p-1">
                     <p>{item.name}</p>
                   </div>
                 </li>

@@ -7,7 +7,7 @@ const UserListComponent = ({ data, clickable }) => {
   const router = useRouter();
   return (
     <div className="px-10 pt-10 pb-16 text-[#ddd] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
-      {data.map((item) => {
+      {data?.map((item) => {
         const getId = () => {
           router.push(`/getStaticProps-revalidate/${item?.id?.toString()}`);
         };
@@ -15,7 +15,7 @@ const UserListComponent = ({ data, clickable }) => {
           <div
             onClick={clickable ? getId : null}
             className="
-        bg-black  relative  hover:bg-white hover:text-black rounded-xl shadow-2xl cursor-pointer transition-all duration-200 shadow-black p-8 "
+        bg-[#090909]  relative  hover:bg-white hover:text-black rounded-xl shadow-2xl cursor-pointer transition-all duration-200 shadow-black p-8 "
             key={item.id}
           >
             <h1 className=" mb-2  font-bold text-xl ">

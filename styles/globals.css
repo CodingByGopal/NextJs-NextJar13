@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .moveBottomAnimation {
-  animation: moveInBottom 0.5s ease-out 0.2s;
+  animation: moveInBottom 0.3s ease-out 0.2s;
   animation-fill-mode: backwards;
   backface-visibility: hidden;
 }

@@ -15,7 +15,7 @@ export default function GetSingleActor({ params }) {
 
   return (
     <section className=" flex justify-center items-center  h-screen px-5 bg-gradient-to-t from-black to-[#ccc] ">
-      <div className="  relative max-w-screen-xl  mx-auto bg-[#222] shadow-2xl shadow-black rounded-xl    p-10 flex flex-col justify-center items-center">
+      <div className=" moveBottomAnimation relative max-w-screen-xl  mx-auto bg-[#222] shadow-2xl shadow-black rounded-xl    p-10 flex flex-col justify-center items-center">
         <h1 className=" text-center md:text-5xl text-3xl font-extrabold mb-4">
           {name}
         </h1>
