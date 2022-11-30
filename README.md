@@ -1,4 +1,4 @@
-# NextJar13 — Next.js 13 projects with it's latest features
+# NextJar13 — Next.js 13 Projects With It's Latest Features
 
 NextJar13 is a Next.js 13-based responsive project developed with tailwind css. It includes SSR(Server-Side Rendering), ISR(Incremental Static Regeneration), and SSG(Static Site Generation), and Client Side Fetching (with SWR React Hook ) ect. Vercel build next.js 13 image component has been used in the project along with latest react hook names as "use hook" for data fetching in different components.
 
