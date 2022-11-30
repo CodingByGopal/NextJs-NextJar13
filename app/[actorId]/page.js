@@ -14,7 +14,7 @@ export default function GetSingleActor({ params }) {
   const { name, place_of_birth } = results;
 
   return (
-    <section className=" flex justify-center items-center  h-screen px-5 bg-gradient-to-t from-black to-[#ccc] ">
+    <section className=" flex justify-center items-center  h-screen px-5 bg-gradient-to-t from-[#121212] to-[#ccc] ">
       <div className=" moveBottomAnimation relative max-w-screen-xl  mx-auto bg-[#222] shadow-2xl shadow-black rounded-xl    p-10 flex flex-col justify-center items-center">
         <h1 className=" text-center md:text-5xl text-3xl font-extrabold mb-4">
           {name}

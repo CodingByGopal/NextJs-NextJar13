@@ -18,7 +18,7 @@ const clientSideFetch = () => {
     <section className=" pt-20">
       <Details
         text="ClientSide Fetching"
-        description="Displaying list of 12 items from fake store API. Fetching data using SWR library (React Hooks for Data Fetching). Listed Results are not clickable"
+        description="Displaying list of 12 items from fake store API. Fetching data using SWR library (React Hooks for Data Fetching). Listed results are not clickable"
       />
       <UserListComponent data={data} />
     </section>

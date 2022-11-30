@@ -7,16 +7,16 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 const linkList = [
   {
-    name: "getServerSideProps",
+    name: "GetServerSideProps",
     path: "/",
   },
 
   {
-    name: "getStaticProps",
+    name: "GetStaticProps",
     path: "/getStaticProps",
   },
   {
-    name: "getStaticProps ISR",
+    name: "GetStaticProps ISR",
     path: "/getStaticProps-revalidate",
   },
   {
@@ -59,10 +59,10 @@ const Navbar = () => {
                   className={`${
                     pathname === item.path
                       ? " bg-red-600  cursor-not-allowed border-red-600 "
-                      : ""
-                  } md:px-5 px-2 py-1 rounded-full  border md:text-base text-xs hover:bg-white hover:text-black transition-all cursor-pointer duration-300`}
+                      : "hover:bg-white hover:text-black cursor-pointer"
+                  }  px-2  rounded  border md:text-sm text-xs  transition-all  duration-300`}
                 >
-                  <div className="  flex justify-center items-center md:p-3 p-1">
+                  <div className="  flex justify-center items-center md:p-3 sm:p-2 p-1 ">
                     <p>{item.name}</p>
                   </div>
                 </li>

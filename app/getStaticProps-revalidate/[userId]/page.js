@@ -11,7 +11,7 @@ const getUserData = ({ params }) => {
   );
 
   return (
-    <div className=" px-5 h-screen bg-gradient-to-t from-black to-[#ccc]  flex  items-center ">
+    <div className=" px-5 h-screen bg-gradient-to-t from-[#121212] to-[#ccc]  flex  items-center ">
       <div className="p-14 moveBottomAnimation relative flex justify-center items-center flex-col max-w-screen-xl mx-auto bg-black shadow-2xl shadow-black rounded-xl">
         <h1 className=" text-center mb-5  font-bold md:text-4xl text-xl ">
           Name: {item.name.substring(0, 28)}
