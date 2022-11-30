@@ -26,7 +26,6 @@ Favicon: https://realfavicongenerator.net/
 
 Tinst and shades: https://maketintsandshades.com/
 
-Logo design: https://www.adobe.com/express/create/banner
 
 Placeholder: https://placeholderimage.dev/
 
