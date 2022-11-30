@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed  shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
-      <div className=" px-8 py-5 ">
+      <div className=" px-5 md:px-8 py-5 ">
         <div className="flex  justify-between items-center">
           <Link href="/">
             <p className=" md:text-4xl text-xl  font-bold">
