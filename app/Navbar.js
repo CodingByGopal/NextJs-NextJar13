@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed  max-w-screen-2xl shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
-      <div className=" px-5 md:px-8 py-5 ">
+      <div className=" relative px-5 md:px-8 py-5 ">
         <div className="flex  justify-between items-center">
           <Link href="/">
             <p className=" md:text-4xl text-xl  font-bold">
@@ -48,10 +48,12 @@ const Navbar = () => {
       </div>
       <div
         className={`${
-          open ? "-translate-x-full" : ""
-        } shadow-black shadow-2xl  lg:w-1/4 md:w-2/5 sm:w-1/2  w-3/5 h-screen   fixed  left-full    bg-[#121212]  transition-all duration-300`}
+          open
+            ? "-translate-x-full opacity-100 pointer-events-auto visible"
+            : " opacity-0  pointer-events-none invisible"
+        } absolute left-full shadow-black shadow-2xl  lg:w-1/4 md:w-2/5 sm:w-1/2  w-3/5 h-screen      bg-[#121212]  transition-all duration-300`}
       >
-        <ul className=" md:px-6 px-3 shadow-black shadow-2xl flex flex-col md:pt-20 pt-14   justify-center gap-6 text-white">
+        <ul className="  md:px-6 px-3 shadow-black shadow-2xl flex flex-col md:pt-20 pt-14   justify-center gap-6 text-white">
           {linkList.map((item, i) => {
             return (
               <Link key={i} onClick={() => setOpen(false)} href={item.path}>
