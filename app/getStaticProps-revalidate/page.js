@@ -1,6 +1,7 @@
 import { use } from "react";
 import fetchData from "../../components/dataFetcher";
-import Details from "../../components/details";
+import Details from "../../components/Details";
+
 import UserListComponent from "../../components/UserListComponent";
 
 const getStaticPropsRevalidate = () => {

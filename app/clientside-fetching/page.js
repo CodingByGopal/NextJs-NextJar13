@@ -1,11 +1,12 @@
 "use client";
 import useSWR from "swr";
-import { Suspense } from "react";
+
 import fetchData from "../../components/dataFetcher";
-import Details from "../../components/details";
+
 import ErrorCustom from "../../components/ErrorCustom";
 import UserListComponent from "../../components/UserListComponent";
 import CustomLoading from "../../components/CustomLoading";
+import Details from "../../components/Details";
 const clientSideFetch = () => {
   const { data, error } = useSWR(
     "https://fakestoreapi.com/products?limit=12",

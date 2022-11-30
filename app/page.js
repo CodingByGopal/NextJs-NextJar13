@@ -1,8 +1,8 @@
 import ActorListComponent from "../components/ActorListComponent";
 import apiConfig from "../components/apiConfigTmdb";
 import { use } from "react";
-import Details from "../components/details";
 import fetchData from "../components/dataFetcher";
+import Details from "../components/Details";
 
 const Home = () => {
   const data = use(
