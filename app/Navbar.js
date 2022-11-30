@@ -32,7 +32,7 @@ const Navbar = () => {
   const close = <FontAwesomeIcon icon={faXmark} />;
 
   return (
-    <div className="fixed  shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
+    <div className="fixed  max-w-screen-2xl shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
       <div className=" px-5 md:px-8 py-5 ">
         <div className="flex  justify-between items-center">
           <Link href="/">
