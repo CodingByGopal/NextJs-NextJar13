@@ -32,7 +32,7 @@ const Navbar = () => {
   const close = <FontAwesomeIcon icon={faXmark} />;
 
   return (
-    <div className="fixed  shadow-2xl shadow-black  h-20 w-full z-50  bg-[#121212]">
+    <div className="fixed  shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
       <div className=" px-8 py-5 ">
         <div className="flex  justify-between items-center">
           <Link href="/">
@@ -41,7 +41,7 @@ const Navbar = () => {
             </p>
           </Link>
 
-          <div className=" md:text-2xl text-lg" onClick={() => setOpen(!open)}>
+          <div className=" text-2xl " onClick={() => setOpen(!open)}>
             {open ? close : menu}
           </div>
         </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     pathname === item.path
                       ? " bg-red-600  cursor-not-allowed border-red-600 "
                       : "hover:bg-white hover:text-black cursor-pointer"
-                  }  px-2  rounded  border md:text-sm text-xs  transition-all  duration-300`}
+                  }  px-2 md:py-0 py-2 rounded  border md:text-sm text-xs  transition-all  duration-300`}
                 >
                   <div className="  flex justify-center items-center md:p-3 sm:p-2 p-1 ">
                     <p>{item.name}</p>
