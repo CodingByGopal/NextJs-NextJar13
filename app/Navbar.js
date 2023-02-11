@@ -28,8 +28,8 @@ const linkList = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const menu = <FontAwesomeIcon icon={faBars} />;
-  const close = <FontAwesomeIcon icon={faXmark} />;
+  const menu = <FontAwesomeIcon className=" cursor-pointer" icon={faBars} />;
+  const close = <FontAwesomeIcon className=" cursor-pointer" icon={faXmark} />;
 
   return (
     <div className="fixed  max-w-screen-2xl shadow-2xl shadow-black   w-full z-50  bg-[#121212]">
