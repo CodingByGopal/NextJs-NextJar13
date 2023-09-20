@@ -7,7 +7,7 @@ import UserListComponent from "../../components/UserListComponent";
 const getStaticPropsRevalidate = () => {
   const data = use(
     fetchData(`https://jsonplaceholder.typicode.com/users`, {
-      next: { revalidate: 2 },
+      next: { revalidate: 60 },
     })
   );
 

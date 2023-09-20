@@ -6,7 +6,7 @@ const getUserData = ({ params }) => {
 
   const item = use(
     fetchData(`https://jsonplaceholder.typicode.com/users/${userId}`, {
-      next: { revalidate: 2 },
+      next: { revalidate: 60 },
     })
   );
 
